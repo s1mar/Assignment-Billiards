@@ -42,3 +42,5 @@ forces
 ¤Implement Runge-Kutta Integration ¤ 2nd order / midpoint (5 points) 
 ¤ 4th order (5 points)
 
+### Screenshot
+![Alt text](screen_grab.png "Screenshot")
