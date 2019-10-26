@@ -1,7 +1,18 @@
 # Assignment #2 - Billiards
 
-#### Demo Link
- https://s1mar.github.io/Assignment-Billiards/index
+#### Demo Link(s)
+ 
+ ### Basic Shot
+ ![](BasicShot.gif)   
+ If gif not viewable, please checkout the YouTube Link: <https://youtu.be/oPvjWj2i880>  
+ 
+ ### High Restitution
+ ![](HighRestitution.gif)  
+ If gif not viewable, please checkout the YouTube Link: <https://youtu.be/8PjP9CsUYVg>  
+
+ ### High Friction
+ ![](HighFriction.gif)  
+ If gif not viewable, please checkout the YouTube Link: <https://youtu.be/l28-7al9Cds>  
 
 #### Goal 
 Write a system that will simulate a single shot of a billiards game.
