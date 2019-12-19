@@ -13,6 +13,8 @@ public class Ball : MonoBehaviour
      public float radius;
      Renderer rend;   
 
+     bool outOfAction = false;
+
     public void AddForce(Vector3 force){
         Debug.Log("Force Vector Recieved:"+force);
         forces.Add(force);
@@ -28,7 +30,8 @@ public class Ball : MonoBehaviour
     
     void FixedUpdate()
     {
-        processTheForces();
+        if(!outOfAction)
+            processTheForces();
     }
 
     void processTheForces(){
@@ -87,5 +90,10 @@ public class Ball : MonoBehaviour
 
     public Vector3 getCenter(){
         return rend.bounds.center;
+    }
+
+
+    public void putOutOfAction(){
+        outOfAction = true;
     }
 }

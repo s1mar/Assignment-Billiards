@@ -94,8 +94,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -710,6 +710,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2364656, guid: 4f7648444fd2cb942919b62a357297f0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446080, guid: 4f7648444fd2cb942919b62a357297f0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f7648444fd2cb942919b62a357297f0, type: 3}
 --- !u!1 &1675999888
@@ -788,6 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0381b1328e13e14429d9866e8a995b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pocketPlaneRenderer: {fileID: 1792049762}
   radiusCorrectionOffset: 0.422
 --- !u!1 &1716672925 stripped
 GameObject:
@@ -807,6 +816,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fbf9516ed73d5b40969eb0c5b3f571a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &1792049762 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2364656, guid: 4f7648444fd2cb942919b62a357297f0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1660600555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1818711793 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 147938, guid: 4f7648444fd2cb942919b62a357297f0,

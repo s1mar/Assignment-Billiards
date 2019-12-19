@@ -6,7 +6,11 @@ public class CollisionManager : MonoBehaviour
 {       
     Ball[] balls;
     Cushion[] cushions;
- 
+    
+    [SerializeField]
+    Renderer pocketPlaneRenderer;
+    private Vector3 minExtents, maxExtents;
+
     [Range (0,1)]    
     public float radiusCorrectionOffset = 0;
 
@@ -19,6 +23,10 @@ public class CollisionManager : MonoBehaviour
     void Start(){
 
         sheet = GameObject.FindObjectOfType<PhysxSheet>();
+
+        //pocket plane bounds
+        minExtents =pocketPlaneRenderer.bounds.min;
+        maxExtents = pocketPlaneRenderer.bounds.max;
     }
 
 
@@ -57,8 +65,15 @@ public class CollisionManager : MonoBehaviour
                         Ball B = balls[j];
                         checkForCollisionBetweenBalls(A,B);
                     }
+                        //Check for whether the ball is in on the plane or has fell in a pocket
+                        if(hasBallFallenIntoAPocketOrGoneOutOfBounds(balls[i]))
+                        {
+                            balls[i].putOutOfAction();
+                        }
 
                 }
+
+              
 
 
          }
@@ -114,6 +129,13 @@ public class CollisionManager : MonoBehaviour
                                        (z_closest - ball.getCenter().z)*(z_closest - ball.getCenter().z));
 
            return distance<ball.getRadius();                            
+    }
+
+    bool hasBallFallenIntoAPocketOrGoneOutOfBounds(Ball ball){
+
+            Vector3 posOfBall = ball.transform.position;
+            return posOfBall.x < minExtents.x || posOfBall.x > maxExtents.x;
+
     }
 
 }
