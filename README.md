@@ -58,3 +58,13 @@ forces
 
 ### Screenshot
 ![Alt text](screen_grab.png "Screenshot")
+
+## Extra Implemented - Pockets
+ 
+ High Restitution shot with Pockets implemented:
+
+ ![](highEWithPockets.gif)
+
+High Restitution shot without Pockets implemented:
+
+ ![](HighRestitution.gif)
