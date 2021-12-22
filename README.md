@@ -1,4 +1,4 @@
-# Assignment #2 - Billiards
+# Physics-Simulation: Billiards Shot
 
 #### Demo Link(s)
  
